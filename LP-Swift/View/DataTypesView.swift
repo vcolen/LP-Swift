@@ -8,22 +8,6 @@
 import SwiftUI
 
 struct DataTypesView: View {
-    //    //MARK: - Tipos
-    //
-    
-    //
-    //    var arrayDeStrings = [String]()
-    //    var dictionary1: [String: Bool]
-    //    var dictionary2: Dictionary<String, Bool>
-    
-    //    var optional: Float? = nil
-    //    print(optional)
-    //
-    //    print(optional ?? "Não há valor na variável")
-    //
-    //    optional = 33
-    //    print(optional)
-    //
     //    //inferencia de tipo
     //    var inferredString = "Hello, World!"
     //    var inferredInt = 12
@@ -40,8 +24,13 @@ struct DataTypesView: View {
     let float: Float = 3.1415926535897932384626433
     var double: Double = 3.1415926535897932384626433
     var bool: Bool = true
-   @State private var optional: String? = nil
-    //var tuple: (Bool, String, Int, Float) = (true, "Tupla", 10, 13.5)
+    @State private var optional: String? = nil
+    
+    var arrayDeStrings = [String]() // <- meu favorito
+    var arrayDeStrings2: Array<String> = []
+    var dictionary1 = [String: Bool]() // <- meu favorito
+    var dictionary2 = Dictionary<String, Bool>()
+    var tuple: (Bool, String, Int, Float) = (true, "Tupla", 10, 13.5)
     
     var body: some View {
         NavigationView {
@@ -51,23 +40,30 @@ struct DataTypesView: View {
                 ScrollView {
                     VStack(spacing: 30) {
                         Text("Tipos Primitivos")
-                            .font(.title)
+                            .font(.bold(.title)())
+                            .underline()
                         Image(uiImage: UIImage(named: "PrimitiveDataTypes")!)
                             .resizable()
                             .imageStyle()
-                            
-                            
-                        Text("π = 3.1415926535897932384626433...")
-                            .font(.bold(.title3)())
                         
-                        VStack(alignment: .leading) {
-                            Text("Float = \(float)")
-                            Text("Double = \(double)")
+                        VStack(spacing: 10) {
+                            Text("Pontos Flutuantes")
+                                .font(.title2)
+                                .underline()
+                            
+                            Text("π = 3.1415926535897932384626433...")
+                                .font(.bold(.title3)())
+                            
+                            VStack(alignment: .leading) {
+                                Text("Float = \(float)")
+                                Text("Double = \(double)")
+                            }
                         }
                         
                         VStack {
                             Text("Opcionais")
-                                .font(.bold(.title2)())
+                                .font(.title2)
+                                .underline()
                             HStack {
                                 Text("Valor do opcional: ")
                                 Text(optional ?? "nil")
@@ -91,6 +87,14 @@ struct DataTypesView: View {
                                 .resizable()
                                 .imageStyle()
                         }
+                        
+                        Text("Coleções de dados")
+                            .font(.bold(.title)())
+                            .underline()
+                        
+                        Image(uiImage: UIImage(named: "CollectionTypes")!)
+                            .resizable()
+                            .imageStyle()
                     }
                 }
             }
