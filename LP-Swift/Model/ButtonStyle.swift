@@ -10,7 +10,7 @@ import SwiftUI
 struct ButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.title2)
+            .font(.body)
             .padding()
             .background(.white)
             .cornerRadius(16)

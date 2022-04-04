@@ -11,6 +11,7 @@ struct ImageStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .scaledToFit()
+            .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                         .stroke(.white,
