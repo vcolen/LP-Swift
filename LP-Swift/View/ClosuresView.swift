@@ -7,45 +7,59 @@
 
 import SwiftUI
 
-struct ClosuresView: View {
-    @State private var height: Float = 0.0
-    @State private var weight: Float = 0.0
-    @State private var imc: Float = 0.0
+struct ClosuresView: View {    
+    @State private var countries = [Country]()
     
     var body: some View {
         ZStack {
-            LinearGradient(colors: [.swiftOrange, .swiftRed], startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [.swiftOrange, .swiftRed], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
-            VStack(spacing: 50) {
+            ScrollView {
                 VStack {
-                    Text("Peso")
-                        .font(.headline)
-                    TextField("Peso em Quilos", value: $weight, format: .number)
+                    Image(uiImage: UIImage(named: "closures")!)
+                        .resizable()
+                        .imageStyle()
+                    
+                    ForEach(countries) { country in
+                        HStack {
+                            Text(country.name)
+                        }
                         .padding()
-                        .textFieldStyle(.roundedBorder)
-                }
-                
-                VStack(alignment: .center) {
-                    Text("Altura")
-                        .font(.headline)
-                    TextField("Altura em Centímetros", value: $height, format: .number)
-                        .padding()
-                        .textFieldStyle(.roundedBorder)
-                }
-                
-                Button {
-                    Person.getImc(height: height/100, weight: weight) { calculatedImc in
-                        imc = calculatedImc
+                        .background(.ultraThinMaterial)
+                        .cornerRadius(18)
                     }
-                } label: {
-                    Text("Calcular IMC")
-                        .buttonStyle()
+                    
+                    NavigationLink {
+                        ExtensionView()
+                    } label: {
+                        Text("Aprender sobre Extensions")
+                            .buttonStyle()
+                    }
                 }
-                
-                Text(imc.decimalPoints(2))
-                    .font(.title)
             }
-            .navigationTitle("Closures & Extensions")
+            .task {
+                await loadCountries()
+            }
+            .navigationTitle("Closures")
+            .preferredColorScheme(.dark)
+        }
+    }
+    
+    func loadCountries() async  {
+        guard let url = URL(string: "https://restcountries.com/v2/lang/pt") else {
+            print("Invalid URL")
+            return
+        }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let decodedResponse = try JSONDecoder().decode([Country].self, from: data)
+            countries = decodedResponse
+            countries.sort { country1, country2 in
+                country1.name < country2.name
+            }
+        } catch {
+            print(error)
         }
     }
 }

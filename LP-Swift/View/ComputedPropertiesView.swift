@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct ComputedPropertiesView: View {
+    
     var randomNumber: Int {
         Int.random(in: 1...1000)
     }
-    
     @State private var aux = 0
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             LinearGradient(colors: [.swiftOrange, .swiftRed], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
             
             VStack(spacing: 20) {
-                Spacer()
+                Image(uiImage: UIImage(named: "computedProperty")!)
+                    .resizable()
+                    .imageStyle()
+                
                 Button {
                     aux = randomNumber
                 } label: {
@@ -30,12 +33,18 @@ struct ComputedPropertiesView: View {
                 
                 Text(String(aux))
                     .font(.title)
-                Spacer()
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(16)
+                
+                Image(uiImage: UIImage(named: "computedPropertyButton")!)
+                    .resizable()
+                    .imageStyle()
                 
                 NavigationLink {
                     ClosuresView()
                 } label: {
-                    Text("Aprender sobre Closures e Extensions")
+                    Text("Aprender sobre Closures")
                         .buttonStyle()
                 }
             }

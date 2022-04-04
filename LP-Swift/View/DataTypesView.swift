@@ -107,15 +107,19 @@ struct DataTypesView: View {
                         Image(uiImage: UIImage(named: "array")!)
                             .resizable()
                             .imageStyle()
+                        
                         Image(uiImage: UIImage(named: "dictionary")!)
                             .resizable()
                             .imageStyle()
+                        
                         Image(uiImage: UIImage(named: "tuple")!)
                             .resizable()
                             .imageStyle()
+                        
                         Image(uiImage: UIImage(named: "enum")!)
                             .resizable()
                             .imageStyle()
+                        
                         NavigationLink {
                             ComputedPropertiesView()
                         } label: {

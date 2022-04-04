@@ -19,6 +19,8 @@
 		79650F5927FA591600565EBB /* ClosuresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79650F5627FA591600565EBB /* ClosuresView.swift */; };
 		79650F5B27FA591D00565EBB /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79650F5A27FA591D00565EBB /* ButtonStyle.swift */; };
 		79F13CA127FA5DC400EB11F0 /* ImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F13CA027FA5DC400EB11F0 /* ImageStyle.swift */; };
+		79F13CA727FA7ABF00EB11F0 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F13CA627FA7ABE00EB11F0 /* Country.swift */; };
+		79F13CA927FA81A100EB11F0 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F13CA827FA81A100EB11F0 /* ExtensionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		79650F5627FA591600565EBB /* ClosuresView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosuresView.swift; sourceTree = "<group>"; };
 		79650F5A27FA591D00565EBB /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		79F13CA027FA5DC400EB11F0 /* ImageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStyle.swift; sourceTree = "<group>"; };
+		79F13CA627FA7ABE00EB11F0 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		79F13CA827FA81A100EB11F0 /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			children = (
 				79650F4C27FA590400565EBB /* Person.swift */,
 				79650F5A27FA591D00565EBB /* ButtonStyle.swift */,
+				79F13CA627FA7ABE00EB11F0 /* Country.swift */,
 				79F13CA027FA5DC400EB11F0 /* ImageStyle.swift */,
 			);
 			path = Model;
@@ -110,6 +115,7 @@
 			children = (
 				79650F5627FA591600565EBB /* ClosuresView.swift */,
 				79650F5427FA591600565EBB /* ComputedPropertiesView.swift */,
+				79F13CA827FA81A100EB11F0 /* ExtensionView.swift */,
 				79650F5527FA591600565EBB /* DataTypesView.swift */,
 			);
 			path = View;
@@ -192,8 +198,10 @@
 				79650F5B27FA591D00565EBB /* ButtonStyle.swift in Sources */,
 				79650F5227FA590E00565EBB /* View+Extension.swift in Sources */,
 				79650F5127FA590E00565EBB /* Float+Extension.swift in Sources */,
+				79F13CA727FA7ABF00EB11F0 /* Country.swift in Sources */,
 				79650F5927FA591600565EBB /* ClosuresView.swift in Sources */,
 				79650F3727FA58DC00565EBB /* LP_SwiftApp.swift in Sources */,
+				79F13CA927FA81A100EB11F0 /* ExtensionView.swift in Sources */,
 				79650F5727FA591600565EBB /* ComputedPropertiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
