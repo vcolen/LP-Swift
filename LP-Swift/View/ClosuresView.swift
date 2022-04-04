@@ -41,7 +41,6 @@ struct ClosuresView: View {
                 await loadCountries()
             }
             .navigationTitle("Closures")
-            .preferredColorScheme(.dark)
         }
     }
     

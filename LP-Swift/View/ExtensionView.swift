@@ -27,6 +27,7 @@ struct ExtensionView: View {
                         .padding()
                         .background(.ultraThinMaterial)
                         .cornerRadius(16)
+                        .foregroundColor(.white)
                     
                     Button {
                         getDaysAfterWW1()

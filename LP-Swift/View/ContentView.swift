@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     private let viewArray = [
-        "Tipos de Dado",
+        "Tipos de Dados",
         "Propriedades Computadas",
+        "Closures",
+        "Extension"
     ]
     
     var body: some View {
@@ -34,30 +36,34 @@ struct ContentView: View {
                     List(viewArray, id: \.self) { view in
                         NavigationLink {
                             switch view {
-                            case "Tipos de dado":
+                            case "Tipos de Dados":
                                 DataTypesView()
                             case "Propriedades Computadas":
                                 ComputedPropertiesView()
-                            default:
+                            case "Closures":
+                                ClosuresView()
+                            case "Extension":
                                 ExtensionView()
+                            default:
+                                EmptyView()
                             }
                         } label: {
                             Text(view)
                                 .foregroundColor(.white)
                         }
+                        
                         .foregroundColor(.white)
                         .padding()
                         .background(
                             LinearGradient(colors: [.swiftRed, .swiftOrange], startPoint: .leading, endPoint: .bottomTrailing)
                         )
                         .cornerRadius(16)
-                        
                     }
                     .listStyle(.plain)
                 }
             }
             .navigationBarHidden(true)
-            .listItemTint(.swiftRed)
+            .listSectionSeparatorTint(.white)
         }
         .accentColor(.white)
     }

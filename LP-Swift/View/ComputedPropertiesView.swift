@@ -36,6 +36,7 @@ struct ComputedPropertiesView: View {
                     .padding()
                     .background(.ultraThinMaterial)
                     .cornerRadius(16)
+                    .foregroundColor(.white)
                 
                 Image(uiImage: UIImage(named: "computedPropertyButton")!)
                     .resizable()

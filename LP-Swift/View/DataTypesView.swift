@@ -53,6 +53,8 @@ struct DataTypesView: View {
                     Text("Tipos Primitivos")
                         .font(.bold(.title)())
                         .underline()
+                        .foregroundColor(.white)
+                    
                     Image(uiImage: UIImage(named: "PrimitiveDataTypes")!)
                         .resizable()
                         .imageStyle()
@@ -61,13 +63,18 @@ struct DataTypesView: View {
                         Text("Pontos Flutuantes")
                             .font(.title2)
                             .underline()
+                            .foregroundColor(.white)
                         
                         Text("π = 3.1415926535897932384626433...")
                             .font(.bold(.title3)())
+                            .foregroundColor(.white)
                         
                         VStack(alignment: .leading) {
                             Text("Float = \(float)")
+                                .foregroundColor(.white)
+                            
                             Text("Double = \(double)")
+                                .foregroundColor(.white)
                         }
                     }
                     
@@ -75,6 +82,7 @@ struct DataTypesView: View {
                         Text("Opcionais")
                             .font(.title2)
                             .underline()
+                            .foregroundColor(.white)
                         HStack {
                             Text("Valor do opcional: ")
                             Text(optional ?? "nil")
@@ -102,6 +110,7 @@ struct DataTypesView: View {
                     Text("Coleções de dados")
                         .font(.bold(.title)())
                         .underline()
+                        .foregroundColor(.white)
                     
                     Image(uiImage: UIImage(named: "array")!)
                         .resizable()
@@ -128,7 +137,6 @@ struct DataTypesView: View {
                 }
             }
             .navigationTitle("Data Types")
-            .preferredColorScheme(.dark)
         }
     }
 }
