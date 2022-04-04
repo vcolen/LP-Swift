@@ -15,34 +15,31 @@ struct ComputedPropertiesView: View {
     @State private var aux = 0
     
     var body: some View {
-        
-        NavigationView {
-            ZStack {
-                LinearGradient(colors: [.swiftOrange, .swiftRed], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
-                
-                VStack(spacing: 20) {
-                    Spacer()
-                    Button {
-                        aux = randomNumber
-                    } label: {
-                        Text("Gerar número aleatório")
-                            .buttonStyle()
-                    }
-                    
-                    Text(String(aux))
-                        .font(.title)
-                    Spacer()
-                    
-                    NavigationLink {
-                        ClosuresView()
-                    } label: {
-                        Text("Aprender sobre Closures e Extensions")
-                            .buttonStyle()
-                    }
+        ZStack {
+            LinearGradient(colors: [.swiftOrange, .swiftRed], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
+            
+            VStack(spacing: 20) {
+                Spacer()
+                Button {
+                    aux = randomNumber
+                } label: {
+                    Text("Gerar número aleatório")
+                        .buttonStyle()
                 }
-                .navigationTitle("Computed Properties")
+                
+                Text(String(aux))
+                    .font(.title)
+                Spacer()
+                
+                NavigationLink {
+                    ClosuresView()
+                } label: {
+                    Text("Aprender sobre Closures e Extensions")
+                        .buttonStyle()
+                }
             }
+            .navigationTitle("Computed Properties")
         }
     }
 }

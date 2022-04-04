@@ -28,9 +28,21 @@ struct DataTypesView: View {
     
     var arrayDeStrings = [String]() // <- meu favorito
     var arrayDeStrings2: Array<String> = []
+    
     var dictionary1 = [String: Bool]() // <- meu favorito
     var dictionary2 = Dictionary<String, Bool>()
-    var tuple: (Bool, String, Int, Float) = (true, "Tupla", 10, 13.5)
+    
+    var tuple: (Bool, String) = (true, "Tupla")
+    
+    enum weekDays {
+        case sunday
+        case monday
+        case tuesday
+        case wednesday
+        case thursday
+        case friday
+        case saturday
+    }
     
     var body: some View {
         NavigationView {
@@ -92,9 +104,24 @@ struct DataTypesView: View {
                             .font(.bold(.title)())
                             .underline()
                         
-                        Image(uiImage: UIImage(named: "CollectionTypes")!)
+                        Image(uiImage: UIImage(named: "array")!)
                             .resizable()
                             .imageStyle()
+                        Image(uiImage: UIImage(named: "dictionary")!)
+                            .resizable()
+                            .imageStyle()
+                        Image(uiImage: UIImage(named: "tuple")!)
+                            .resizable()
+                            .imageStyle()
+                        Image(uiImage: UIImage(named: "enum")!)
+                            .resizable()
+                            .imageStyle()
+                        NavigationLink {
+                            ComputedPropertiesView()
+                        } label: {
+                            Text("Aprender sobre Propriedades Computadas")
+                                .buttonStyle()
+                        }
                     }
                 }
             }
