@@ -29,7 +29,7 @@ struct ExtensionView: View {
                         .cornerRadius(16)
                     
                     Button {
-                        getDate()
+                        getDaysAfterWW1()
                         buttonIsDisabled = true
                     } label: {
                         Text("Descobrir quantos dias se passaram desde o fim da Primeira Guerra Mundial")
@@ -44,7 +44,7 @@ struct ExtensionView: View {
         .navigationTitle("Extensions")
     }
     
-    func getDate()  {
+    func getDaysAfterWW1()  {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         

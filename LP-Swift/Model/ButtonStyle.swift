@@ -14,5 +14,6 @@ struct ButtonStyle: ViewModifier {
             .padding()
             .background(.white)
             .cornerRadius(16)
+            .foregroundColor(.blue)
     }
 }

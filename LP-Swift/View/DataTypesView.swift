@@ -45,87 +45,85 @@ struct DataTypesView: View {
     }
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                LinearGradient(colors: [.swiftOrange, .swiftRed], startPoint: .top, endPoint: .bottom)
-                    .ignoresSafeArea()
-                ScrollView {
-                    VStack(spacing: 30) {
-                        Text("Tipos Primitivos")
-                            .font(.bold(.title)())
-                            .underline()
-                        Image(uiImage: UIImage(named: "PrimitiveDataTypes")!)
-                            .resizable()
-                            .imageStyle()
-                        
-                        VStack(spacing: 10) {
-                            Text("Pontos Flutuantes")
-                                .font(.title2)
-                                .underline()
-                            
-                            Text("π = 3.1415926535897932384626433...")
-                                .font(.bold(.title3)())
-                            
-                            VStack(alignment: .leading) {
-                                Text("Float = \(float)")
-                                Text("Double = \(double)")
-                            }
-                        }
-                        
-                        VStack {
-                            Text("Opcionais")
-                                .font(.title2)
-                                .underline()
-                            HStack {
-                                Text("Valor do opcional: ")
-                                Text(optional ?? "nil")
-                                    .foregroundColor(optional != nil ? .green : .pink)
-                            }
-                            .padding()
-                            .background(.black)
-                            .cornerRadius(16)
-                            
-                            Button {
-                                if optional == nil {
-                                    optional = "Não sou mais nil :)"
-                                } else {
-                                    optional = nil
-                                }
-                            } label: {
-                                Text("Mudar valor do opcional")
-                                    .buttonStyle()
-                            }
-                            Image(uiImage: UIImage(named: "OptionalButtonAction")!)
-                                .resizable()
-                                .imageStyle()
-                        }
-                        
-                        Text("Coleções de dados")
-                            .font(.bold(.title)())
+        ZStack {
+            LinearGradient(colors: [.swiftOrange, .swiftRed], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            ScrollView {
+                VStack(spacing: 30) {
+                    Text("Tipos Primitivos")
+                        .font(.bold(.title)())
+                        .underline()
+                    Image(uiImage: UIImage(named: "PrimitiveDataTypes")!)
+                        .resizable()
+                        .imageStyle()
+                    
+                    VStack(spacing: 10) {
+                        Text("Pontos Flutuantes")
+                            .font(.title2)
                             .underline()
                         
-                        Image(uiImage: UIImage(named: "array")!)
-                            .resizable()
-                            .imageStyle()
+                        Text("π = 3.1415926535897932384626433...")
+                            .font(.bold(.title3)())
                         
-                        Image(uiImage: UIImage(named: "dictionary")!)
-                            .resizable()
-                            .imageStyle()
+                        VStack(alignment: .leading) {
+                            Text("Float = \(float)")
+                            Text("Double = \(double)")
+                        }
+                    }
+                    
+                    VStack {
+                        Text("Opcionais")
+                            .font(.title2)
+                            .underline()
+                        HStack {
+                            Text("Valor do opcional: ")
+                            Text(optional ?? "nil")
+                                .foregroundColor(optional != nil ? .green : .pink)
+                        }
+                        .padding()
+                        .background(.black)
+                        .cornerRadius(16)
                         
-                        Image(uiImage: UIImage(named: "tuple")!)
-                            .resizable()
-                            .imageStyle()
-                        
-                        Image(uiImage: UIImage(named: "enum")!)
-                            .resizable()
-                            .imageStyle()
-                        
-                        NavigationLink {
-                            ComputedPropertiesView()
+                        Button {
+                            if optional == nil {
+                                optional = "Não sou mais nil :)"
+                            } else {
+                                optional = nil
+                            }
                         } label: {
-                            Text("Aprender sobre Propriedades Computadas")
+                            Text("Mudar valor do opcional")
                                 .buttonStyle()
                         }
+                        Image(uiImage: UIImage(named: "OptionalButtonAction")!)
+                            .resizable()
+                            .imageStyle()
+                    }
+                    
+                    Text("Coleções de dados")
+                        .font(.bold(.title)())
+                        .underline()
+                    
+                    Image(uiImage: UIImage(named: "array")!)
+                        .resizable()
+                        .imageStyle()
+                    
+                    Image(uiImage: UIImage(named: "dictionary")!)
+                        .resizable()
+                        .imageStyle()
+                    
+                    Image(uiImage: UIImage(named: "tuple")!)
+                        .resizable()
+                        .imageStyle()
+                    
+                    Image(uiImage: UIImage(named: "enum")!)
+                        .resizable()
+                        .imageStyle()
+                    
+                    NavigationLink {
+                        ComputedPropertiesView()
+                    } label: {
+                        Text("Aprender sobre Propriedades Computadas")
+                            .buttonStyle()
                     }
                 }
             }

@@ -11,7 +11,7 @@ import SwiftUI
 struct LP_SwiftApp: App {
     var body: some Scene {
         WindowGroup {
-            ExtensionView()
+            ContentView()
         }
     }
 }

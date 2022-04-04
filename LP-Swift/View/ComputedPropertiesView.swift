@@ -53,7 +53,7 @@ struct ComputedPropertiesView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ComputedProperties_Previews: PreviewProvider {
     static var previews: some View {
         ComputedPropertiesView()
     }
