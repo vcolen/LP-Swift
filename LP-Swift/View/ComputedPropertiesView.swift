@@ -26,7 +26,9 @@ struct ComputedPropertiesView: View {
                     .imageStyle()
                 
                 Button {
-                    aux = randomNumber
+                    withAnimation {
+                        aux = randomNumber
+                    }
                 } label: {
                     Text("Gerar número aleatório")
                         .buttonStyle()

@@ -26,7 +26,7 @@ struct ContentView: View {
                         Image(uiImage: UIImage(named: "swift")!)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 60, height: 60, alignment: .leading)
+                            .frame(width: 50, height: 50, alignment: .leading)
                         
                         Text("Taylor Swift")
                             .font(.system(size: 40, weight: .thin, design: .default))
@@ -62,9 +62,13 @@ struct ContentView: View {
                             )
                             .cornerRadius(16)
                         }
+                        .listRowSeparator(.hidden)
                         .listRowBackground(Color.white)
                     }
                     .listStyle(.plain)
+                    .onAppear {
+                     UITableView.appearance().separatorStyle = .none
+                    }
                 }
             }
             .navigationBarHidden(true)

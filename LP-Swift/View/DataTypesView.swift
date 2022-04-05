@@ -93,10 +93,12 @@ struct DataTypesView: View {
                         .cornerRadius(16)
                         
                         Button {
-                            if optional == nil {
-                                optional = "Não sou mais nil :)"
-                            } else {
-                                optional = nil
+                            withAnimation {
+                                if optional == nil {
+                                    optional = "Não sou mais nil :)"
+                                } else {
+                                    optional = nil
+                                }
                             }
                         } label: {
                             Text("Mudar valor do opcional")

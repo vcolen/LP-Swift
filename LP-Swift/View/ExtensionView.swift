@@ -81,6 +81,12 @@ struct ExtensionView: View {
                             .resizable()
                             .imageStyle()
                     }
+                    NavigationLink {
+                        FunctionsView()
+                    } label: {
+                        Text("Aprender sobre Funções")
+                            .buttonStyle()
+                    }
                 }
             }
         }

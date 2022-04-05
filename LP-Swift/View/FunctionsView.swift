@@ -27,6 +27,11 @@ struct FunctionsView: View {
                 .ignoresSafeArea()
             ScrollView {
                 VStack {
+                    Text("Passagem de parâmetro por referência")
+                        .font(.title)
+                        .underline()
+                        .multilineTextAlignment(.center)
+                        
                     Image(uiImage: UIImage(named: "cupStruct")!)
                         .resizable()
                         .imageStyle()
@@ -36,25 +41,43 @@ struct FunctionsView: View {
                         .imageStyle()
                     
                     Button(cup.content) {
-                        changeContent(of: &cup)
+                        withAnimation {
+                            changeContent(of: &cup)
+                        }
                     }
                     .padding()
                     .background(liquids[cup.content])
                     .cornerRadius(16)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.white,
+                                    lineWidth: 3))
+                    .padding()
                     
-                    
+
                     Image(uiImage: UIImage(named: "firstButtonFunction")!)
                         .resizable()
                         .imageStyle()
+                    
+                    Text("Auxiliares de parâmetros")
+                        .font(.title)
+                        .underline()
+                        .multilineTextAlignment(.center)
+                    
                     Image(uiImage: UIImage(named: "firstReferenceFunction")!)
                         .resizable()
                         .imageStyle()
+                    
                     Image(uiImage: UIImage(named: "newButtonFunctionByReference")!)
                         .resizable()
                         .imageStyle()
                     
+                    Image(uiImage: UIImage(named: "funtionParameters")!)
+                        .resizable()
+                        .imageStyle()
                 }
             }
+            .navigationTitle("Functions")
         }
     }
     
