@@ -12,7 +12,8 @@ struct ContentView: View {
         "Tipos de Dados",
         "Propriedades Computadas",
         "Closures",
-        "Extension"
+        "Extension",
+        "Functions"
     ]
     
     var body: some View {
@@ -45,6 +46,8 @@ struct ContentView: View {
                                     ClosuresView()
                                 case "Extension":
                                     ExtensionView()
+                                case "Functions":
+                                    FunctionsView()
                                 default:
                                     EmptyView()
                                 }
@@ -52,18 +55,15 @@ struct ContentView: View {
                                 Text(view)
                                     .foregroundColor(.white)
                             }
-                            
                             .foregroundColor(.white)
                             .padding()
                             .background(
                                 LinearGradient(colors: [.swiftRed, .swiftOrange], startPoint: .leading, endPoint: .bottomTrailing)
                             )
                             .cornerRadius(16)
-                            
                         }
                         .listRowBackground(Color.white)
                     }
-                    
                     .listStyle(.plain)
                 }
             }
