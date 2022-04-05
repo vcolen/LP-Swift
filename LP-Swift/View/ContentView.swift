@@ -33,32 +33,37 @@ struct ContentView: View {
                     }
                     .padding()
                     
-                    List(viewArray, id: \.self) { view in
-                        NavigationLink {
-                            switch view {
-                            case "Tipos de Dados":
-                                DataTypesView()
-                            case "Propriedades Computadas":
-                                ComputedPropertiesView()
-                            case "Closures":
-                                ClosuresView()
-                            case "Extension":
-                                ExtensionView()
-                            default:
-                                EmptyView()
+                    List {
+                        ForEach(viewArray, id: \.self){  view in
+                            NavigationLink {
+                                switch view {
+                                case "Tipos de Dados":
+                                    DataTypesView()
+                                case "Propriedades Computadas":
+                                    ComputedPropertiesView()
+                                case "Closures":
+                                    ClosuresView()
+                                case "Extension":
+                                    ExtensionView()
+                                default:
+                                    EmptyView()
+                                }
+                            } label: {
+                                Text(view)
+                                    .foregroundColor(.white)
                             }
-                        } label: {
-                            Text(view)
-                                .foregroundColor(.white)
+                            
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(
+                                LinearGradient(colors: [.swiftRed, .swiftOrange], startPoint: .leading, endPoint: .bottomTrailing)
+                            )
+                            .cornerRadius(16)
+                            
                         }
-                        
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(
-                            LinearGradient(colors: [.swiftRed, .swiftOrange], startPoint: .leading, endPoint: .bottomTrailing)
-                        )
-                        .cornerRadius(16)
+                        .listRowBackground(Color.white)
                     }
+                    
                     .listStyle(.plain)
                 }
             }

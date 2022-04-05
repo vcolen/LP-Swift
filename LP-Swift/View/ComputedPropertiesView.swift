@@ -12,6 +12,7 @@ struct ComputedPropertiesView: View {
     var randomNumber: Int {
         Int.random(in: 1...1000)
     }
+    
     @State private var aux = 0
     
     var body: some View {

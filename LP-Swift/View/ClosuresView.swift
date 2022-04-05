@@ -16,18 +16,43 @@ struct ClosuresView: View {
                 .ignoresSafeArea()
             ScrollView {
                 VStack {
-                    Image(uiImage: UIImage(named: "closures")!)
-                        .resizable()
-                        .imageStyle()
+                    Text("Países que falam português")
+                        .font(.title)
+                        .underline()
                     
                     ForEach(countries) { country in
-                        HStack {
-                            Text(country.name)
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("País: ")
+                                Text(country.name)
+                                    .foregroundColor(.mint)
+                            }
+                            HStack {
+                                Text("Capital: ")
+                                Text(country.capital ?? "Não especificada")
+                                    .foregroundColor(country.capital != nil ? .green : .purple)
+                            }
                         }
                         .padding()
                         .background(.ultraThinMaterial)
                         .cornerRadius(18)
                     }
+                    
+                    Image(uiImage: UIImage(named: "closures")!)
+                        .resizable()
+                        .imageStyle()
+                    
+                    Text("Ordenando um Vetor")
+                        .font(.title)
+                        .underline()
+                    
+                    Image(uiImage: UIImage(named: "countriesSortSnippet")!)
+                        .resizable()
+                        .imageStyle()
+                    
+                    Image(uiImage: UIImage(named: "countriesSortCode")!)
+                        .resizable()
+                        .imageStyle()
                     
                     NavigationLink {
                         ExtensionView()

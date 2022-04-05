@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7961063727FC4D960068AB42 /* FunctionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961063627FC4D960068AB42 /* FunctionsView.swift */; };
 		79650F3727FA58DC00565EBB /* LP_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79650F3627FA58DC00565EBB /* LP_SwiftApp.swift */; };
 		79650F3B27FA58DE00565EBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79650F3A27FA58DE00565EBB /* Assets.xcassets */; };
 		79650F3E27FA58DE00565EBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79650F3D27FA58DE00565EBB /* Preview Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7961063627FC4D960068AB42 /* FunctionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsView.swift; sourceTree = "<group>"; };
 		79650F3327FA58DC00565EBB /* LP-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LP-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79650F3627FA58DC00565EBB /* LP_SwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LP_SwiftApp.swift; sourceTree = "<group>"; };
 		79650F3A27FA58DE00565EBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				79FD78E427FB0A1700B72815 /* Launch Screen.storyboard */,
 				79650F5527FA591600565EBB /* DataTypesView.swift */,
 				79AF5F1B27FB0288002701D8 /* ContentView.swift */,
+				7961063627FC4D960068AB42 /* FunctionsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				79650F5927FA591600565EBB /* ClosuresView.swift in Sources */,
 				79650F3727FA58DC00565EBB /* LP_SwiftApp.swift in Sources */,
 				79F13CA927FA81A100EB11F0 /* ExtensionView.swift in Sources */,
+				7961063727FC4D960068AB42 /* FunctionsView.swift in Sources */,
 				79650F5727FA591600565EBB /* ComputedPropertiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
