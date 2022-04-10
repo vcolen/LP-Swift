@@ -75,6 +75,13 @@ struct FunctionsView: View {
                     Image(uiImage: UIImage(named: "funtionParameters")!)
                         .resizable()
                         .imageStyle()
+                    
+                    NavigationLink {
+                        RestoView()
+                    } label: {
+                        Text("Aprender a última lição")
+                            .buttonStyle()
+                    }
                 }
             }
             .navigationTitle("Functions")

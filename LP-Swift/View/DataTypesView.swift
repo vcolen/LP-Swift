@@ -8,15 +8,6 @@
 import SwiftUI
 
 struct DataTypesView: View {
-    //    //inferencia de tipo
-    //    var inferredString = "Hello, World!"
-    //    var inferredInt = 12
-    //    var inferredFloat = 12.5
-    //
-    //    //aceita praticamente qualquer caractere
-    //    let π = 3.14159
-    //    let ちょっと待ってください = "Espere um momento, por favor."
-    //    let 🐶🐮 = "cachorro-vaca"
     
     var char: Character = "A"
     let string: String = "Hello, World!"
@@ -58,26 +49,7 @@ struct DataTypesView: View {
                     Image(uiImage: UIImage(named: "PrimitiveDataTypes")!)
                         .resizable()
                         .imageStyle()
-                    
-                    VStack(spacing: 10) {
-                        Text("Pontos Flutuantes")
-                            .font(.title2)
-                            .underline()
-                            .foregroundColor(.white)
-                        
-                        Text("π = 3.1415926535897932384626433...")
-                            .font(.bold(.title3)())
-                            .foregroundColor(.white)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Float = \(float)")
-                                .foregroundColor(.white)
-                            
-                            Text("Double = \(double)")
-                                .foregroundColor(.white)
-                        }
-                    }
-                    
+                                        
                     VStack {
                         Text("Opcionais")
                             .font(.title2)

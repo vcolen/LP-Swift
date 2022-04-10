@@ -13,7 +13,8 @@ struct ContentView: View {
         "Propriedades Computadas",
         "Closures",
         "Extension",
-        "Functions"
+        "Functions",
+        "Resto"
     ]
     
     var body: some View {
@@ -28,11 +29,11 @@ struct ContentView: View {
                             .scaledToFit()
                             .frame(width: 50, height: 50, alignment: .leading)
                         
-                        Text("Taylor Swift")
+                        Text("Swift")
                             .font(.system(size: 40, weight: .thin, design: .default))
                             .foregroundColor(.swiftRed)
                     }
-                    .padding()
+                    .padding([.trailing])
                     
                     List {
                         ForEach(viewArray, id: \.self){  view in
@@ -48,6 +49,8 @@ struct ContentView: View {
                                     ExtensionView()
                                 case "Functions":
                                     FunctionsView()
+                                case "Resto":
+                                    RestoView()
                                 default:
                                     EmptyView()
                                 }
